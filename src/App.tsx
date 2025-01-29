@@ -14,18 +14,18 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowContent(true);
-    }, 300000); // 5 minutes in milliseconds
+    }, 10000); // 5 minutes in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <Header />
       <main>
         <Hero />
         {showContent && (
           <>
+            <Header />
             <Protocol />
             <TargetAudience />
             <SocialProof />
